@@ -1,0 +1,105 @@
+.formContainer {
+  width: 100%;
+  border-radius: 12px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.mainForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.label {
+  flex: 1;
+  font-size: 18px;
+  margin-right: 10px;
+  color: #000;
+}
+
+.formInput {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  max-width: 95px;
+  height: 50px;
+  border: 1px solid #000;
+  text-align: center;
+}
+.formInput:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.submitButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.border {
+  border: 1px solid #f0efef;
+}
+.undertext {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.54);
+  line-height: 20px;
+}
+
+.headerTitle {
+  font-size: 35px;
+  color: #000000;
+}
+.textContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.formText {
+  font-size: 24px;
+  color: #000;
+}
+.formTextRed {
+  font-size: 24px;
+  color: #ee1313;
+}
+.metricsText {
+  font-size: 24px;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.metricsTitle {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+}

@@ -1,0 +1,37 @@
+.footer {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+}
+
+.footerContent {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.footerIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerLinks a {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
