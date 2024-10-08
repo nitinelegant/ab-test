@@ -1,9 +1,11 @@
 import React from "react";
 import FormHeader from "./FormHeader";
 
-type Props = {};
+type Props = {
+  goBack: () => void;
+};
 
-const MetricsFrom = ({ goBack }: any) => {
+const MetricsFrom = ({ goBack }: Props) => {
   return (
     <div className="formContainer">
       {/* header  */}

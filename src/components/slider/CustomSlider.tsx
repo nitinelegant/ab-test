@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 const CustomSlider = () => {
   const [value, setValue] = useState(50);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseDown = () => {
     const handleMouseMove = (e: MouseEvent) => {
       if (sliderRef.current) {
         const rect = sliderRef.current.getBoundingClientRect();

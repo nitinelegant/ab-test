@@ -15,7 +15,6 @@ const GuideSection = () => {
   const [selectedCard, setSelectedCard] = useState<string | null>(null); // Track which card is selected
   const [isFlipping, setIsFlipping] = useState(false);
 
-  const handleForm = (value: string) => {};
   return (
     <div className="guidecontainer">
       <div className="leftColumn">

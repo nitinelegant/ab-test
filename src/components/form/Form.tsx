@@ -4,8 +4,12 @@ import CalculationForm from "./CalculationForm";
 import SRMForm from "./SRMForm";
 import MetricsFrom from "./MetricsFrom";
 
-//@typescript-eslint/no-explicit-any
-const Form = ({ selectedCard, goBack }: any) => {
+type Props = {
+  selectedCard: string;
+  goBack: () => void;
+};
+
+const Form = ({ selectedCard, goBack }: Props) => {
   if (selectedCard === "CALCULATIONS") {
     return <CalculationForm goBack={goBack} />;
   }

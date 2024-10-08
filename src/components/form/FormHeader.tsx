@@ -2,9 +2,12 @@ import React from "react";
 import Image from "next/image";
 import GoBack from "../../public/images/goBack.svg";
 
-type Props = {};
+type Props = {
+  goBack: () => void;
+  title: string;
+};
 
-const FormHeader = ({ goBack, title }: any) => {
+const FormHeader = ({ goBack, title }: Props) => {
   return (
     <>
       <div className="flex items-center gap-5">

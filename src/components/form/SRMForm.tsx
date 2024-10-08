@@ -2,8 +2,12 @@ import React from "react";
 import FormHeader from "./FormHeader";
 import Info from "../../public/images/Info.svg";
 import Image from "next/image";
-//@typescript-eslint/no-explicit-any
-const SRMForm = ({ goBack }: any) => {
+
+type Props = {
+  goBack: () => void;
+};
+
+const SRMForm = ({ goBack }: Props) => {
   return (
     <div className="formContainer">
       {/* header  */}

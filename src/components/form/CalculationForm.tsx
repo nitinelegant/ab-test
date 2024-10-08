@@ -3,8 +3,12 @@ import FormHeader from "./FormHeader";
 import CustomSlider from "../slider/CustomSlider";
 import Info from "../../public/images/Info.svg";
 import Image from "next/image";
-//@typescript-eslint/no-explicit-any
-const Calculation = ({ goBack }: any) => {
+
+type Props = {
+  goBack: () => void;
+};
+
+const Calculation = ({ goBack }: Props) => {
   return (
     <div className="formContainer">
       {/* header  */}
