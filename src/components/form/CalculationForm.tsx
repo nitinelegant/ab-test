@@ -3,9 +3,7 @@ import FormHeader from "./FormHeader";
 import CustomSlider from "../slider/CustomSlider";
 import Info from "../../public/images/Info.svg";
 import Image from "next/image";
-
-type Props = {};
-
+//@typescript-eslint/no-explicit-any
 const Calculation = ({ goBack }: any) => {
   return (
     <div className="formContainer">
