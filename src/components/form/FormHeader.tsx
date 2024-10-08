@@ -7,7 +7,7 @@ type Props = {};
 const FormHeader = ({ goBack, title }: any) => {
   return (
     <>
-      <div className="formRow space-x-6">
+      <div className="flex items-center gap-5">
         <Image
           src={GoBack}
           alt="Logo"

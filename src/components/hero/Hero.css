@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 476px;
   flex-direction: column;
   background-color: white;
   text-align: center;
@@ -11,20 +11,19 @@
   margin-top: 80px;
 }
 .heroTitle {
-  font-size: 86px;
-  font-weight: 700;
+  font-size: 72px;
+  font-weight: 700 !important;
   margin-bottom: 1rem;
-  color: #333;
+  color: #0c0c0d;
   text-align: center;
-  line-height: 86px;
+  line-height: 86.4px;
 }
 .heroSubtitle {
-  font-size: 43px;
+  font-size: 32px;
   font-weight: 400;
   margin-bottom: 1rem;
   color: #0c0c0d;
   text-align: center;
   padding-top: 20px;
-  border-width: 1px solid red;
-  line-height: 50px;
+  line-height: 38.4px;
 }
