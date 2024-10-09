@@ -85,7 +85,7 @@ const Calculation = ({ goBack }: Props) => {
               className="calculationFormInput text-black"
               placeholder="2"
               onChange={(e) => {
-                let value = e.target.value;
+                const value = e.target.value;
                 if (
                   value === "" ||
                   /^(?:0{1,2}|100|[1-9][0-9]{0,1})$/.test(value)
@@ -130,7 +130,7 @@ const Calculation = ({ goBack }: Props) => {
             className="calculationFormInput mr-6  text-black"
             placeholder="2"
             onChange={(e) => {
-              let value = e.target.value;
+              const value = e.target.value;
               if (
                 value === "" ||
                 /^(?:0{1,2}|100|[1-9][0-9]{0,1})$/.test(value)
