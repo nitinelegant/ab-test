@@ -4,15 +4,17 @@
   background-color: white;
   display: flex;
   justify-content: center;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #d9d9d9;
+  height: 200px;
 }
 
 .footerContent {
-  width: 80%;
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
+  padding-left: 1%;
+  padding-right: 8%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 .footerIcons {
@@ -34,4 +36,11 @@
 
 .footerLinks a:hover {
   text-decoration: underline;
+}
+
+.footer-links {
+  font-size: 20px;
+  line-height: 24px;
+  color: #1e1e1e;
+  margin-bottom: 15px;
 }

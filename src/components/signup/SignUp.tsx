@@ -19,7 +19,7 @@ const SignUp: React.FC = () => {
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          className="signUpInput"
+          className="signUpInput placeholder-black"
           placeholder="you@example.com"
         />
         <button type="submit" className="submitButton">

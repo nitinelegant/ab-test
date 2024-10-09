@@ -32,7 +32,7 @@ const GuideSection = () => {
         >
           {selectedCard === null ? (
             <div style={{ paddingLeft: "9%" }}>
-              <h1 className="cardMainTitle">Your Guided Calculator</h1>
+              <h1 className="cardMainTitle mt-3">Your Guided Calculator</h1>
               <Card
                 gradientColors="to right, #4FA1E8B2, #5041DEB2"
                 title="Sample Size Calculator"

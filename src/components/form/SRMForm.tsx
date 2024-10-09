@@ -21,11 +21,7 @@ const SRMForm = ({ goBack }: Props) => {
             <Image src={Info} alt="info" width={24} height={24} />
           </label>
 
-          <input
-            type="text"
-            className="w-175 h-49 border p-3 rounded-lg"
-            placeholder="2"
-          />
+          <input type="text" className="srmInput" placeholder="" />
         </div>
         <div className="border" />
         <div className="flex justify-between items-center mt-5 mb-5">
@@ -34,11 +30,7 @@ const SRMForm = ({ goBack }: Props) => {
             <Image src={Info} alt="info" width={24} height={24} />
           </label>
 
-          <input
-            type="text"
-            className="w-175 h-49 border p-3 rounded-lg"
-            placeholder="2"
-          />
+          <input type="text" className="srmInput" placeholder="" />
         </div>
         <div className="border" />
         <div className="flex justify-between items-center mt-5 mb-5">
@@ -46,11 +38,7 @@ const SRMForm = ({ goBack }: Props) => {
             Chi-squared test p-value
             <Image src={Info} alt="info" width={24} height={24} />
           </label>
-          <input
-            type="text"
-            className="w-175 h-49 border p-3 rounded-lg"
-            placeholder="2"
-          />
+          <input type="text" className="srmInput" placeholder="" />
         </div>
         <div className="border" />
         <div className="textContainer">

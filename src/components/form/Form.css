@@ -34,8 +34,18 @@
 }
 .srmLabel {
   font-size: 22px;
+  font-weight: 400;
   line-height: 30px;
+  letter-spacing: -0.23px;
   color: #000;
+}
+.calculationFormLabel {
+  flex: 1;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+  color: #000000;
 }
 
 .label {
@@ -43,6 +53,17 @@
   font-size: 18px;
   margin-right: 10px;
   color: #000;
+}
+.calculationFormInput {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+  border: 1px solid #000;
+  max-width: 95px;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
 }
 
 .formInput {
@@ -57,7 +78,11 @@
 .custom-input {
   max-width: 125px;
 }
-.formInput:focus {
+.formInput :focus {
+  outline: none;
+  border-color: #000;
+}
+.calculationFormInput:focus {
   outline: none;
   border-color: #000;
 }
@@ -78,11 +103,17 @@
   font-size: 18px;
   color: rgba(0, 0, 0, 0.54);
   line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -0.23px;
+  padding-top: 4px;
 }
 
 .headerTitle {
-  font-size: 35px;
+  font-size: 24px;
   color: #000000;
+  font-weight: 600;
+  line-height: 28.8px;
+  letter-spacing: -0.02em;
 }
 .textContainer {
   margin-top: 80px;
@@ -99,15 +130,36 @@
 .formTextRed {
   font-size: 24px;
   color: #ee1313;
+  line-height: 29.5px;
+  font-weight: 400;
 }
 .metricsText {
   font-size: 24px;
   color: #000;
   margin-top: 25px;
   margin-bottom: 25px;
+  line-height: 29.5px;
 }
 .metricsTitle {
   font-weight: 700;
   font-size: 24px;
   color: #000;
+  line-height: 29.5px;
+}
+
+.srmInput {
+  width: 175px;
+  height: 49px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.percentageText {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+  text-align: center;
+  color: #8b8787;
 }

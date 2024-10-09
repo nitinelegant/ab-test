@@ -1,0 +1,26 @@
+.aboutContainer {
+  margin-top: 120px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 120px;
+}
+.aboutTitle {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 86.4px;
+  letter-spacing: -0.03em;
+  color: #0c0c0d;
+}
+.paragrapgh {
+  font-family: var(--font-exo);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #000;
+}
+.aboutDivider {
+  margin-top: 50px;
+}
+.paragrapghDivider {
+  margin-top: 50px;
+}

@@ -1,39 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
 import "./Header.css";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
-  const [activePath, setActivePath] = useState("/");
+  const pathname = usePathname();
 
   const isActive = (path: string) => {
-    return activePath === path ? "font-bold" : "";
-  };
-
-  const handleClick = (path: string) => {
-    setActivePath(path);
-    // In a real application, you would handle navigation here
+    return pathname === path ? "font-bold" : "";
   };
 
   return (
     <header className="header">
       <div className="logo">
-        <Image src={Logo} alt="Logo" width={250} height={90} />
+        <Link href="/">
+          <Image src={Logo} alt="Logo" width={250} height={90} />
+        </Link>
       </div>
       <nav className="space-x-4">
-        <button
-          onClick={() => handleClick("/")}
-          className={`${isActive("/")} text-black `}
-        >
+        <Link href="/" className={`${isActive("/")} text-black`}>
           Home
-        </button>
-        <button
-          onClick={() => handleClick("/about")}
-          className={`${isActive("/about")} text-black `}
-        >
+        </Link>
+        <Link href="/about" className={`${isActive("/about")} text-black`}>
           About
-        </button>
+        </Link>
       </nav>
     </header>
   );

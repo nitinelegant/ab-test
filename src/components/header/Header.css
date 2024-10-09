@@ -10,6 +10,7 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  height: 99px;
 }
 .logo {
   flex-grow: 1;

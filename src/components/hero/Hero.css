@@ -12,11 +12,12 @@
 }
 .heroTitle {
   font-size: 72px;
-  font-weight: 700 !important;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: #0c0c0d;
   text-align: center;
   line-height: 86.4px;
+  letter-spacing: -3%;
 }
 .heroSubtitle {
   font-size: 32px;
