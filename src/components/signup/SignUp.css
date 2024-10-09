@@ -10,13 +10,12 @@
 .title {
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
   color: #1e1e1e;
   line-height: 28.8px;
-  letter-spacing: -2%;
 }
 
 .SignUpform {
+  margin-top: 20px;
   display: flex;
   flex-direction: row; /* Change to row for horizontal layout */
   align-items: center;
