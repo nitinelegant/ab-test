@@ -39,7 +39,7 @@
 .submitButton {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #2c2c2c;
+  background-color: #2c2c2c !important;
   color: #f5f5f5;
   border: none;
   border-radius: 8px;
