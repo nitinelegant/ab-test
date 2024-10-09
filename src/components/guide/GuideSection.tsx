@@ -69,7 +69,7 @@ const GuideSection = () => {
       </div>
       <div className="rightColumn">
         <iframe
-          src="https://www.example.com" // Replace with your iframe source
+          src="https://myabtest.streamlit.app?embedded=true"
           title="Example Iframe"
           className="iframe"
         ></iframe>

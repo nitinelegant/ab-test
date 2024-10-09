@@ -17,6 +17,7 @@ const FormHeader = ({ goBack, title }: Props) => {
           width={70}
           height={70}
           onClick={goBack}
+          style={{ cursor: "pointer" }}
         />
         <h3 className="headerTitle">{title}</h3>
       </div>

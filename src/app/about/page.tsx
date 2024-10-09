@@ -23,7 +23,16 @@ const page = () => {
           and my personal experiences.
         </p>
         <div className="paragrapghDivider" />
-        <p className="paragrapgh">My website: www.preritsaxena.com</p>
+        <p className="paragrapgh">
+          My website:{" "}
+          <a
+            href="https://www.preritsaxena.com"
+            target="_blank"
+            className="text-blue-500"
+          >
+            www.preritsaxena.com
+          </a>{" "}
+        </p>
       </div>
     </>
   );

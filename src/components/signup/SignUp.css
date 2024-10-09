@@ -29,6 +29,7 @@
   border-radius: 8px;
   width: 90%; /* Set the width to 70% */
   margin-right: 10px; /* Space between input and button */
+  color: #2c2c2c;
 }
 .signUpInput:focus {
   outline: none;

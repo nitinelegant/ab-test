@@ -26,7 +26,7 @@ const Calculation = ({ goBack }: Props) => {
           <div className="flex gap-1 items-center">
             <input
               type="text"
-              className="calculationFormInput placeholder-black text-black"
+              className="calculationFormInput text-black"
               placeholder="2"
             />
             <p className="percentageText">%</p>
@@ -58,7 +58,7 @@ const Calculation = ({ goBack }: Props) => {
 
           <input
             type="text"
-            className="calculationFormInput mr-6 placeholder-black text-black"
+            className="calculationFormInput mr-6  text-black"
             placeholder="2"
           />
         </div>
@@ -69,8 +69,8 @@ const Calculation = ({ goBack }: Props) => {
             <Image src={Info} alt="info" width={24} height={24} />
           </label>
           <input
-            type="password"
-            className="calculationFormInput mr-6 placeholder-black text-black"
+            type="text"
+            className="calculationFormInput mr-6  text-black"
             placeholder="0.05"
           />
         </div>
@@ -83,7 +83,7 @@ const Calculation = ({ goBack }: Props) => {
           <div className="flex gap-1 items-center">
             <input
               type="text"
-              className="calculationFormInput placeholder-black text-black"
+              className="calculationFormInput  text-black"
               placeholder="2"
             />
             <p className="percentageText">%</p>
@@ -100,7 +100,7 @@ const Calculation = ({ goBack }: Props) => {
           </label>
           <input
             type="text"
-            className="calculationFormInput bg-[#F5E6FF] custom-input placeholder-black text-black"
+            className="calculationFormInput bg-[#F5E6FF] custom-input text-black"
             placeholder="8000"
           />
         </div>
