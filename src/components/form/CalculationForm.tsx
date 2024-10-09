@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FormHeader from "./FormHeader";
 import CustomSlider from "../slider/CustomSlider";
 import Info from "../../public/images/Info.svg";
@@ -9,6 +9,61 @@ type Props = {
 };
 
 const Calculation = ({ goBack }: Props) => {
+  // State variables to store the form inputs
+  const [baselineConversionRate, setBaselineConversionRate] = useState(2); // Initial value set to 2%
+  const [minimumDetectableEffect, setMinimumDetectableEffect] = useState(5); // Initial value set to 5%
+  const [numberOfTreatments, setNumberOfTreatments] = useState(2); // Default value 2
+  const [significanceLevel, setSignificanceLevel] = useState(0.05); // Default 0.05 (95% confidence interval)
+  const [powerLevel, setPowerLevel] = useState(80); // Default 0.80 (80% power)
+  const [sampleSize, setSampleSize] = useState<number>(0); // State to store the calculated sample size
+
+  useEffect(() => {
+    calculateSampleSize();
+  }, [
+    baselineConversionRate,
+    minimumDetectableEffect,
+    numberOfTreatments,
+    significanceLevel,
+    powerLevel,
+  ]);
+
+  const calculateSampleSize = () => {
+    try {
+      if (!baselineConversionRate || !minimumDetectableEffect) {
+        return;
+      }
+      // Convert percentages to decimals
+      const p1 = baselineConversionRate / 100;
+      const minimumEffect = minimumDetectableEffect / 100;
+      console.log("minimumEffect", minimumEffect, p1);
+
+      // Fixed z-values for significance level and power
+      const zAlpha = 1.96; // For a 95% confidence interval
+      const zBeta = 0.84; // For 80% power
+
+      // Calculate p2 using the formula: p2 = p1 * (1 + minimumEffect)
+      const p2 = p1 * (1 + minimumEffect);
+
+      // Calculate numerator and denominator for the formula
+      const numerator =
+        Math.pow(zAlpha + zBeta, 2) * (p1 * (1 - p1) + p2 * (1 - p2));
+      const denominator = Math.pow(p1 - p2, 2);
+
+      // Calculate the sample size per group
+      const n = numerator / denominator;
+      console.log("n", n);
+      // Set the calculated sample size in the state
+      setSampleSize(Math.ceil(n));
+    } catch (error) {
+      console.log(`error in calculating sample size: ${error}`);
+    }
+  };
+
+  const handleSliderChange = (newValue: number) => {
+    setMinimumDetectableEffect(newValue);
+    // You can perform additional actions here when the value changes
+    console.log("Slider value changed:", newValue);
+  };
   return (
     <div className="formContainer">
       {/* header  */}
@@ -16,7 +71,7 @@ const Calculation = ({ goBack }: Props) => {
 
       {/* Form with text and input in rows */}
 
-      <form className="mainForm">
+      <form className="mainForm" onSubmit={calculateSampleSize}>
         <div className="border mt-5" />
         <div className="formRow">
           <label className="calculationFormLabel flex gap-2">
@@ -25,9 +80,13 @@ const Calculation = ({ goBack }: Props) => {
           </label>
           <div className="flex gap-1 items-center">
             <input
-              type="text"
+              value={baselineConversionRate}
+              type="number"
               className="calculationFormInput text-black"
               placeholder="2"
+              onChange={(e) => {
+                setBaselineConversionRate(parseFloat(e.target.value));
+              }}
             />
             <p className="percentageText">%</p>
           </div>
@@ -42,7 +101,10 @@ const Calculation = ({ goBack }: Props) => {
             <Image src={Info} alt="info" width={24} height={24} />
           </label>
           <div className="pt-5 pb-5 mt-5 mb-5 flex justify-center items-center">
-            <CustomSlider />
+            <CustomSlider
+              value={minimumDetectableEffect}
+              onChange={handleSliderChange}
+            />
           </div>
         </div>
         {/* custom slider  */}
@@ -57,9 +119,11 @@ const Calculation = ({ goBack }: Props) => {
           </label>
 
           <input
-            type="text"
+            value={numberOfTreatments}
+            type="number"
             className="calculationFormInput mr-6  text-black"
             placeholder="2"
+            onChange={(e) => setNumberOfTreatments(parseInt(e.target.value))}
           />
         </div>
         <div className="border" />
@@ -69,9 +133,12 @@ const Calculation = ({ goBack }: Props) => {
             <Image src={Info} alt="info" width={24} height={24} />
           </label>
           <input
-            type="text"
+            value={significanceLevel}
+            type="number"
             className="calculationFormInput mr-6  text-black"
             placeholder="0.05"
+            onChange={(e) => setSignificanceLevel(parseFloat(e.target.value))}
+            readOnly
           />
         </div>
         <div className="border" />
@@ -82,9 +149,12 @@ const Calculation = ({ goBack }: Props) => {
           </label>
           <div className="flex gap-1 items-center">
             <input
-              type="text"
+              type="number"
               className="calculationFormInput  text-black"
               placeholder="2"
+              value={powerLevel}
+              onChange={(e) => setPowerLevel(parseFloat(e.target.value))}
+              readOnly
             />
             <p className="percentageText">%</p>
           </div>
@@ -99,9 +169,11 @@ const Calculation = ({ goBack }: Props) => {
             <p className="undertext">in each treatment and control</p>
           </label>
           <input
-            type="text"
+            type="number"
             className="calculationFormInput bg-[#F5E6FF] custom-input text-black"
             placeholder="8000"
+            value={sampleSize}
+            readOnly
           />
         </div>
       </form>

@@ -28,7 +28,7 @@ const page = () => {
           <a
             href="https://www.preritsaxena.com"
             target="_blank"
-            className="text-blue-500"
+            className="text-black-500"
           >
             www.preritsaxena.com
           </a>{" "}
