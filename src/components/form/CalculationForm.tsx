@@ -85,7 +85,13 @@ const Calculation = ({ goBack }: Props) => {
               className="calculationFormInput text-black"
               placeholder="2"
               onChange={(e) => {
-                setBaselineConversionRate(parseFloat(e.target.value));
+                let value = e.target.value;
+                if (
+                  value === "" ||
+                  /^(?:0{1,2}|100|[1-9][0-9]{0,1})$/.test(value)
+                ) {
+                  setBaselineConversionRate(parseFloat(value));
+                }
               }}
             />
             <p className="percentageText">%</p>
@@ -123,7 +129,15 @@ const Calculation = ({ goBack }: Props) => {
             type="number"
             className="calculationFormInput mr-6  text-black"
             placeholder="2"
-            onChange={(e) => setNumberOfTreatments(parseInt(e.target.value))}
+            onChange={(e) => {
+              let value = e.target.value;
+              if (
+                value === "" ||
+                /^(?:0{1,2}|100|[1-9][0-9]{0,1})$/.test(value)
+              ) {
+                setNumberOfTreatments(parseFloat(value));
+              }
+            }}
           />
         </div>
         <div className="border" />
