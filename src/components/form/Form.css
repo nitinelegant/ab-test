@@ -195,3 +195,39 @@ input[type="number"] {
 input[type="number"]::placeholder {
   padding-right: 10px;
 }
+
+.radioButton {
+  appearance: none; /* Remove default radio button style */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radioButton:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radioButton:hover {
+  border-color: #555; /* Change border color on hover */
+}
+
+.effectContainer {
+  border: 1px solid #000;
+  padding: 15px;
+  border-radius: 15px;
+}

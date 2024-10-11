@@ -21,13 +21,19 @@ const Footer: React.FC = () => {
       <div className="footerContent">
         {/* Left Section - Icons */}
         <div className="footerIcons">
-          <RiTwitterXLine
-            size={24}
-            color="#000"
-            style={{ cursor: "pointer" }}
-          />
-          <FaLinkedin size={24} color="#000" style={{ cursor: "pointer" }} />
-          <FaMedium size={24} color="#000" style={{ cursor: "pointer" }} />
+          <a href="https://x.com/Prerit17" target="_blank">
+            <RiTwitterXLine
+              size={24}
+              color="#000"
+              style={{ cursor: "pointer" }}
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/prerit-saxena/" target="_blank">
+            <FaLinkedin size={24} color="#000" style={{ cursor: "pointer" }} />
+          </a>
+          <a href="https://medium.com/@prerit-saxena" target="_blank">
+            <FaMedium size={24} color="#000" style={{ cursor: "pointer" }} />
+          </a>
         </div>
 
         {/* Right Section - Links */}
@@ -42,7 +48,9 @@ const Footer: React.FC = () => {
             onClick={() => handleClick("/Blog")}
             className={`${isActive("/Blog")} footer-links `}
           >
-            Blog
+            <a href=" https://medium.com/@prerit-saxena" target="_blank">
+              Blog
+            </a>
           </button>
           <button
             onClick={() => handleClick("/Contact Us")}
